@@ -12,7 +12,7 @@ public class test07 {
             y = 2;
         }
         int z = x / y;
-        // *correctly says theres no errors but im not sure how it actually got it right. i did not implement lub usage ey. 
+        // *correctly says theres no errors
     }
     
 }

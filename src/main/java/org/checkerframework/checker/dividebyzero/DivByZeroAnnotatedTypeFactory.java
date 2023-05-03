@@ -28,7 +28,6 @@ public class DivByZeroAnnotatedTypeFactory extends BaseAnnotatedTypeFactory {
      */
     private Class<? extends Annotation> defaultAnnotation(LiteralTree literal) {
         //TODO 
-
         switch (literal.getKind()) {
         case INT_LITERAL:
             int intValue = (Integer)literal.getValue();
