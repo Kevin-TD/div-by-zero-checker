@@ -33,7 +33,7 @@ public class DivByZeroVisitor extends BaseTypeVisitor<DivByZeroAnnotatedTypeFact
         // TODO
         System.out.println("expr= " + node.toString()); 
         if (node.getKind() == Kind.DIVIDE || node.getKind() == Kind.REMAINDER) {
-            if (hasAnnotation(node.getRightOperand(), Zero.class) || hasAnnotation(node.getRightOperand(), Bottom.class)) {
+            if (!hasAnnotation(node.getRightOperand(), NonZero.class)) {
                 System.out.println("ERROR [1]");
                 return true; 
             }
@@ -57,7 +57,7 @@ public class DivByZeroVisitor extends BaseTypeVisitor<DivByZeroAnnotatedTypeFact
         System.out.println("expr= " + node.toString() + " " + node.getExpression() + " " + node.getVariable() + " " + node.getKind() + " " + node.getClass()); 
         if (node.getKind() == Kind.DIVIDE_ASSIGNMENT || node.getKind() == Kind.REMAINDER_ASSIGNMENT) {
 
-            if (hasAnnotation(node.getExpression(), Zero.class)) {
+            if (!hasAnnotation(node.getExpression(), NonZero.class)) {
                 System.out.println("ERROR [2]");
                 return true; 
             }
