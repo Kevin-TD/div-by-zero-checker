@@ -16,7 +16,7 @@ public class test10 {
             b = a + b;
         }
 
-        int out = a / b;
+        int out = a / b; //* correctly says this is not div zero */
 
 
     }

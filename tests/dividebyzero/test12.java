@@ -13,7 +13,7 @@ public class test12 {
             sum += i;
         }
         int y = sum - 55;
-        int z = i / y;
+        int z = i / y; //* potential div zero */
 
     }
     

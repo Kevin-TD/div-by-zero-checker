@@ -16,7 +16,7 @@ public class test09 {
             b = in - b;
         }
 
-        int out = a / b;
+        int out = a / b; // potential div zero 
 
 
     }

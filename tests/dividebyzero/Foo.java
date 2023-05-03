@@ -87,4 +87,5 @@ class Foo {
         // :: error: divide.by.zero
         int k = 1/z;
     }
+    //able to detect all errors, 0 false positives
 }
